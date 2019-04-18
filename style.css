@@ -1,5 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 main {
     background: #425585;
@@ -11,41 +12,92 @@ main {
     width: 100%;
 }
 #clock {
-    height: 20rem;
-    width: 20rem;
+    height: 50vmin;
+    width: 50vmin;
     position: relative;
+    display: flex;
+    justify-content: center;
     border-color: white;
     border-radius: 50%;
     border-style: solid;
     border-width: 15px;
-    padding: 2rem;
-}
-#clock-face {
-    height: 100%;
-    width: 100%;
-    transform: translateY(-7px); /* adjust for height of clock hands */
+    padding: 0;
 }
 .hand {
     background: #95a5cc;
     height: 10px;
     width: 50%;
     position: absolute;
+    left: 0;
     top: 50%;
-    transform: rotate(90deg);
     transform-origin: 100%;
     transition: all 0.1s;
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
-#hour-hand {
-    width: 40%;
-    left: 10%;
+#hour-block {
+    position: absolute;
+    width: 100%;
+    top: 8vmin;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+#hour-digits {
+    color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3em;
+    letter-spacing: 0.15em;
+    text-align: center;
+    vertical-align: middle;
+    width: 1.5em;
+    padding-left: 1%;
+    padding-bottom: 1%;
+}
+#minute-circle {
+    height: 45%;
+    width: 90%;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    margin: 0;
+    padding: 0;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 45vmin 45vmin 0 0;
+    border-bottom: none;
+}
+#minute-hand {
+    background: rgba(211, 211, 211, 0.7);
+    width: 45%;
+    left: 5%;
+}
+#second-circle {
+    height: 10vmin;
+    width: 10vmin;
+    position: absolute;
+    bottom: 3vmin;
+    border-color: white;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
 }
 #second-hand {
     background: #6e97ff;
-    height: 6px;
+    height: 2px;
 }
 #date-text {
     color: white;
-    font-size: 2em;
-    margin-top: 50px;
+    font-size: 1.5em;
+    margin: 0;
+    margin-top: 20px;
+}
+#time-string {
+    color: white;
+    font-size: 1em;
+    margin: 0;
+    margin-top: 5px;
 }
